@@ -10,6 +10,6 @@ int main(){
         factorial *= i;
     }
     cout<<factorial<<endl;
-    // this is another branch from the github
+    // this is main file basic program..
     return 0;
 } 
