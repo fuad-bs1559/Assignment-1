@@ -17,6 +17,13 @@ int main(){
     // this is an another test in the experimental branch
     int n;
     cin>>n;
+    int factorial = 1;
+    for(int i=1;i<=n;i++){
+        factorial *= i;
+    }
+    cout<<factorial<<endl;
+    // this is another branch from the github and branch name is feature-branch
+    // this is another branch from the github
     int num = fibo(n);
     cout<<num<<endl;
     // adding comment in main branch to arrise conflict....
