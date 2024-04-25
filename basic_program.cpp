@@ -10,10 +10,7 @@ int main(){
         factorial *= i;
     }
     cout<<factorial<<endl;
-<<<<<<< HEAD
     // this is main file basic program..
-=======
     // this is another branch from the github and branch name is feature-branch
->>>>>>> feature-branch
     return 0;
 } 
