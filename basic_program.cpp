@@ -5,7 +5,7 @@ int fibonacci(int n) {
     if (n <= 1) // Base case: if n is 0 or 1, return n
         return n;
     else // Recursive case: calculate Fibonacci(n-1) + Fibonacci(n-2)
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        return fibonacci(n - 1);
 }
 
 int main(){
