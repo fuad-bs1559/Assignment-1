@@ -1,16 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+int fibo(int n){
+    int ans = 1;
+    if(n < 1)return ans = max(0 , 1);
+    return ans += fibo(n-1)+fibo(n-2);
+    return ans;
+}
+
 int main(){
 
     // basic program for calculating factorial
+    // this is the experimental-branch
+    // we have to calculate fibonacci serise...
     int n;
     cin>>n;
-    int factorial = 1;
-    for(int i=1;i<=n;i++){
-        factorial *= i;
-    }
-    cout<<factorial<<endl;
-    // this is main file basic program..
-    // this is another branch from the github and branch name is feature-branch
+    int num = fibo(n);
+    cout<<num<<endl;
     return 0;
 } 
