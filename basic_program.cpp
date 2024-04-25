@@ -1,49 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int nthPrime(int n) {
-    std::vector<bool> isPrime(1000000, true); // Assuming the prime number won't exceed 1000000
-    int count = 0;
-    for (int i = 2; i < isPrime.size(); ++i) {
-        if (isPrime[i]) {
-            ++count;
-            if (count == n) {
-                return i;
-            }
-            for (int j = i * 2; j < isPrime.size(); j += i) {
-                isPrime[j] = false;
-            }
-        }
-    }
-    return -1; // Return -1 if the nth prime is not found
+int fibonacci(int n) {
+    if (n <= 1) // Base case: if n is 0 or 1, return n
+        return n;
+    else // Recursive case: calculate Fibonacci(n-1) + Fibonacci(n-2)
+        return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 int main(){
-    // this is another comment in main branch..
-    // this is the experimental-branch
-    // we have to calculate fibonacci serise...
-
+    // lets try to use revert with fibonacci code..
     int n;
-    std::cout << "Enter the value of n: ";
+    std::cout << "Enter the value of n to calculate Fibonacci(n): ";
     std::cin >> n;
-    
-    int result = nthPrime(n);
-    if (result != -1) {
-        std::cout << "The " << n << "th prime number is: " << result << std::endl;
-    } else {
-        std::cout << "The " << n << "th prime number is not found within the given limit." << std::endl;
-    }
-    cin>>n;
-    int factorial = 1;
-    for(int i=1;i<=n;i++){
-        factorial *= i;
-    }
-    cout<<factorial<<endl;
-    // this is another branch from the github and branch name is feature-branch
-    // this is another branch from the github
-    int num = fibo(n);
-    cout<<num<<endl;
-    // adding comment in main branch to arrise conflict....
-    // this is another comment adding for conflict...
+
+    // Calculate and print Fibonacci(n)
+    std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
+
+    return 0;
     return 0;
 } 
